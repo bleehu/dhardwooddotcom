@@ -1,0 +1,41 @@
+body        {background-image:url('/web/20180830074745im_/http://dhardwood.com/images/kitchen.png'); background-repeat:no-repeat;
+            background-size:100%; background-color:#A54518;}
+h2      {text-align:center; color:#382318; font-family:'FFFTusjBold'; font-size:36px;}
+h3      {text-align:left; color:#382318;}
+p       {margin-left:14px; color:#442C1C; text-indent:8px;}
+div     {color:#442C1C;}
+img     {margin-right:auto; margin-left:auto;}
+#title      {width:88%; margin-right:auto; margin-left:auto;
+                margin-top:40px; margin-bottom:0px;
+                max-width:760px;
+                background-image:url('/web/20180830074745im_/http://dhardwood.com/images/birch.png');}
+#container  {width: 88%; max-width:760px;
+                margin-left:auto; margin-right:auto;
+                margin-top:0px; margin-bottom:auto;;
+                background-color:#7799ff;
+                overflow:hidden;
+                border:solid #382318 2px;
+                background-image:url('/web/20180830074745im_/http://dhardwood.com/Light Wood2.png'); background-repeat:repeat}
+#left       {float:left; width:55%; max-width:440px; padding:12px;}
+#right      {float:left; width:35%; text-align:center; padding:8px;}
+#right < p  {text-align: center;}
+#woods      {text-align: center; overflow: hidden; width:100%}
+#footer     {clear:both; overflow:hidden; width: 100%;}
+#licence,#email {float:left; width: 45%;}
+#footer h3  {text-align: center;}
+
+.wood           {font-size:18px; float:left; clear:both; min-width:100px; width:100%;}
+.wood:hover     {font-size:22px; font-weight:bold; clear:both;}
+
+
+@font-face {
+    font-family: 'FFFTusjBold';
+    src: url('/web/20180830074745im_/http://dhardwood.com/FFF_Tusj-webfont.eot');
+    src: url('/web/20180830074745im_/http://dhardwood.com/FFF_Tusj-webfont.eot#iefix') format('embedded-opentype'),
+         url('/web/20180830074745im_/http://dhardwood.com/FFF_Tusj-webfont.woff') format('woff'),
+         url('/web/20180830074745im_/http://dhardwood.com/FFF_Tusj-webfont.ttf') format('truetype'),
+         url('/web/20180830074745im_/http://dhardwood.com/FFF_Tusj-webfont.svg#FFFTusjBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
