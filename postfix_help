@@ -8,3 +8,37 @@ Postfix configuration values, see postconf(1).
 After modifying main.cf, be sure to run 'service postfix reload'.
 
 to follow email hits, use tail -f /var/log/mail.log
+
+This was the helpful tutorial
+https://www.binarytides.com/postfix-mail-forwarding-debian/
+
+main.cf config:
+
+# TLS parameters
+smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+smtpd_use_tls=yes
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
+# information on enabling SSL in the smtp client.
+
+smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+myhostname = !!redacted!!
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+myorigin = /etc/mailname
+mydestination = $myhostname, postmaster@dhardwood.com, ip-172-31-42-225.us-east-2.compute.internal, localhost.us-east-2.compute.internal, localhost,
+
+relayhost =
+
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+inet_protocols = all
+
+virtual_alias_domains = dhardwood.com
+virtual_alias_maps = hash:/etc/postfix/virtual
+
