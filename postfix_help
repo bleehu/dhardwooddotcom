@@ -1,0 +1,4 @@
+if I need to re-config the postfix server, I should run
+$sudo dpkg-reconfigure postfix
+
+
